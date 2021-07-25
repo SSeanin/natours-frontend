@@ -34,18 +34,26 @@ Respond mixin arguments:
 
 @mixin respond($query) {
   @if $query == phone {
-    @media (max-width: 37.5em) { @content }
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }
   }
 
   @if $query == tab-port {
-    @media (max-width: 56.25em) { @content }
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }
   }
 
   @if $query == tab-land {
-    @media (max-width: 75em) { @content }
+    @media only screen and (max-width: 75em) {
+      @content
+    }
   }
 
   @if $query == big-desktop {
-    @media (min-width: 112.5em) { @content }
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }
   }
 }
